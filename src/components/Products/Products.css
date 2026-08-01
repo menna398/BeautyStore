@@ -1,0 +1,128 @@
+.shop-banner {
+  background: #f8f5f2;
+  padding: 4em 0;
+}
+
+.shop-banner h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.shop-banner p {
+  color: #777;
+  font-size: 18px;
+}
+
+.products-top {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.products-top select {
+  border: 1px solid #ddd;
+  border-radius: 0;
+}
+
+
+.product-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+
+.product-image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: #f8f5f2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 0.4s;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.best-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #111;
+  color: #fff;
+  padding: 0.8em 1em;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 2em;
+  z-index: 10;
+}
+
+.sale-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #d65d4a;
+  color: #fff;
+  padding: 0.8em 1em;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 2em;
+  z-index: 10;
+}
+
+
+.product-card h5 {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 1em;
+  min-height: 50px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+
+.product-card button {
+  margin-top: auto;
+  border-radius: 0;
+  padding: 0.8em;
+  transition: 0.3s;
+}
+
+.product-card button:hover {
+  background: #d65d4a;
+  border-color: #d65d4a;
+}
+
+.current-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+}
+
+.old-price {
+  margin-left: 10px;
+  color: #999;
+  text-decoration: line-through;
+  font-size: 16px;
+  font-weight: 500;
+}

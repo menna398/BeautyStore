@@ -1,0 +1,100 @@
+import { useEffect } from "react";
+import useProductStore from "../../store/productStore";
+
+import bestSellers from "../../data/homeProducts.json";
+import extraSkinCare from "../../data/ExtraSkinCareProducts.json";
+
+import "./Products.css";
+
+import Loader from "../Loader/Loader";
+
+function Products() {
+  const { products, loading, getAllProducts } = useProductStore();
+
+  useEffect(() => {
+    getAllProducts();
+  }, []);
+
+  const allProducts = [
+    ...bestSellers.map((item) => ({
+      ...item,
+      image: item.image,
+      isBestSeller: true,
+    })),
+
+    ...extraSkinCare.map((item) => ({
+      ...item,
+      image: item.image,
+      isBestSeller: false,
+    })),
+
+    ...products.map((item) => ({
+      ...item,
+      image: item.thumbnail,
+      isBestSeller: false,
+    })),
+  ];
+
+  return (
+    <>
+      <section className="shop-banner">
+        <div className="container text-center">
+          <h1>Shop</h1>
+          <p>Discover your favorite skincare, makeup & fragrance essentials.</p>
+        </div>
+      </section>
+
+      <div className="container py-5">
+        <div className="products-top d-flex justify-content-between align-items-center mb-5">
+          <div>
+            <span className="fw-semibold">{allProducts.length} Products</span>
+          </div>
+
+          <div>
+            <span className="me-2 fw-semibold">Sort by:</span>
+            <select className="form-select d-inline w-auto">
+              <option>Best Selling</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="row g-4">
+          {loading ? (
+            <Loader />
+          ) : (
+            allProducts.map((product, index) => (
+              <div className="col-lg-3 col-md-6" key={index}>
+                <div className="product-card">
+                  <div className="product-image">
+                    {product.isBestSeller && (
+                      <>
+                        <span className="best-badge">Best Seller</span>
+                        <span className="sale-badge">Sale</span>
+                      </>
+                    )}
+
+                    <img src={product.image} alt={product.title} />
+                  </div>
+
+                  <h5>{product.title}</h5>
+
+                  <p className="price">
+                    <span className="current-price">${product.price}</span>
+
+                    {product.isBestSeller && (
+                      <span className="old-price">${product.oldPrice}</span>
+                    )}
+                  </p>
+
+                  <button className="btn btn-dark w-100">Add To Cart</button>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Products;

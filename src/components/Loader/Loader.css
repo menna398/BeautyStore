@@ -1,0 +1,30 @@
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+}
+
+.loader-btn {
+  background-color: #d67c6c;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  cursor: default;
+}
+
+.loader-btn:hover {
+  background-color: #d67c6c;
+  color: white;
+}
+
+.loader-btn:disabled {
+  opacity: 1;
+}
+
+.loader-btn .spinner-grow {
+  color: #fff;
+}
