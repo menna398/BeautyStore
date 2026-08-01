@@ -63,7 +63,7 @@ function Cart() {
 
                     <td>${item.price}</td>
 
-                    <td>
+                    <td className="quantity-buttons">
                       <button
                         className=" border-0 bg-light"
                         onClick={() => {

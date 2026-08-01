@@ -57,15 +57,15 @@ function Login() {
       navigate("/");
     }, 1000);
 
-    console.log(user);
+    // console.log(user);
   }
 
   return (
     <>
       <section className="shop-banner">
         <div className="container text-center">
-          <h1 className=" text-light">Login</h1>
-          <p className="text-secondary">Login to your account.</p>
+          <h1>Login</h1>
+          <p>Login to your account.</p>
         </div>
       </section>
 

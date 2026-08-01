@@ -27,7 +27,7 @@ const useProductStore = create((set) => ({
   },
 
   getAllProducts: async () => {
-    console.log("getAllProducts Call");
+    // console.log("getAllProducts Call");
     set({ loading: true });
 
     try {
