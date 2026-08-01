@@ -1,6 +1,7 @@
 import React from "react";
 import products from "../../../data/homeProducts.json";
 import "./BestSellers.css";
+import { Link } from "react-router-dom";
 
 function BestSeller() {
   return (
@@ -19,7 +20,18 @@ function BestSeller() {
           <div className="col-lg-3 col-md-6" key={product.id}>
             <div className="product-card">
               <div className="product-image">
-                <img src={product.image} alt={product.title} />
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  //   onClick={() => console.log("Image Clicked")}
+                />
+                <Link
+                  to={`/products/${product.id}`}
+                  className="quick-view-btn text-decoration-none"
+                >
+                  <i className="fa-regular fa-eye me-2"></i>
+                  Quick View
+                </Link>
               </div>
 
               <div className="mt-3">

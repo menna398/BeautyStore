@@ -29,3 +29,29 @@
   border-color: #d54c3f;
   color: white;
 }
+
+.quick-view-btn {
+  position: absolute;
+  left: 50%;
+  bottom: -60px;
+  transform: translateX(-50%);
+  background: #d65d4a;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.35s;
+  opacity: 0;
+  z-index: 5;
+}
+
+.product-card:hover .quick-view-btn {
+  bottom: 20px;
+  opacity: 1;
+}
+
+.quick-view-btn:hover {
+  background: #111;
+}

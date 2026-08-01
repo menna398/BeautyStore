@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "best-1",
     "title": "Highlighter",
     "price": 60,
     "oldPrice": 70,
@@ -10,7 +10,7 @@
     "description": "Illuminate your skin with a smooth and radiant finish."
   },
   {
-    "id": 2,
+    "id": "best-2",
     "title": "Skincanvas Balm",
     "price": 42,
     "oldPrice": 55,
@@ -20,7 +20,7 @@
     "description": "A nourishing balm that hydrates and softens the skin."
   },
   {
-    "id": 3,
+    "id": "best-3",
     "title": "Overnight Cream",
     "price": 22,
     "oldPrice": 55,
@@ -30,7 +30,7 @@
     "description": "Repair and restore your skin while you sleep."
   },
   {
-    "id": 4,
+    "id": "best-4",
     "title": "Nude Lipstick",
     "price": 35,
     "oldPrice": 67,

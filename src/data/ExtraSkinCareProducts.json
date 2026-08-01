@@ -1,6 +1,6 @@
 [
   {
-    "id": 102,
+    "id": "extra-1",
     "title": "Eyebrow Serum",
     "price": 42,
     "category": "Skincare",
@@ -9,7 +9,7 @@
     "description": "A nourishing serum that helps strengthen and condition eyebrows for a fuller, healthier look."
   },
   {
-    "id": 105,
+    "id": "extra-2",
     "title": "Face Oil",
     "price": 32,
     "category": "Skincare",
@@ -18,7 +18,7 @@
     "description": "A lightweight facial oil that deeply hydrates, softens the skin, and leaves a natural healthy glow."
   },
   {
-    "id": 103,
+    "id": "extra-3",
     "title": "Eye Serum",
     "price": 26,
     "category": "Skincare",
@@ -27,7 +27,7 @@
     "description": "Hydrates the eye area and minimizes fine lines."
   },
   {
-    "id": 104,
+    "id": "extra-4",
     "title": "Vitamin Serum",
     "price": 21,
     "category": "Skincare",
@@ -36,7 +36,7 @@
     "description": "Brightens dull skin and gives a healthy glow."
   },
   {
-    "id": 101,
+    "id": "extra-5",
     "title": "The ordinary AHA 30% + BHA 2%",
     "price": 18,
     "category": "Skincare",

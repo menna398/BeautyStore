@@ -4,6 +4,7 @@ import SerumGirl from "../../../assets/SerumGirl.webp";
 import GlossyGirl from "../../../assets/GlossyGirl.webp";
 import EyeBatchGirl from "../../../assets/EyeBatchGirl.webp";
 import "./ExploreBeauty.css";
+import { Link } from "react-router-dom";
 
 function ExploreBeauty() {
   return (
@@ -23,9 +24,9 @@ function ExploreBeauty() {
 
           <p className="product-title">Foundation</p>
 
-          <a href="#" className="shop-link">
+          <Link to="/products" className="shop-link">
             Shop Now
-          </a>
+          </Link>
         </div>
 
         <div className="col-lg-3 col-md-6">
@@ -35,9 +36,9 @@ function ExploreBeauty() {
 
           <p className="product-title">Face Serum</p>
 
-          <a href="#" className="shop-link">
+          <Link to="/products" className="shop-link">
             Shop Now
-          </a>
+          </Link>
         </div>
 
         <div className="col-lg-3 col-md-6">
@@ -47,9 +48,9 @@ function ExploreBeauty() {
 
           <p className="product-title">Glossy Lipstick</p>
 
-          <a href="#" className="shop-link">
+          <Link to="/products" className="shop-link">
             Shop Now
-          </a>
+          </Link>
         </div>
 
         <div className="col-lg-3 col-md-6">
@@ -59,9 +60,9 @@ function ExploreBeauty() {
 
           <p className="product-title">Eye Patch</p>
 
-          <a href="#" className="shop-link">
+          <Link to="/products" className="shop-link">
             Shop Now
-          </a>
+          </Link>
         </div>
       </div>
     </section>

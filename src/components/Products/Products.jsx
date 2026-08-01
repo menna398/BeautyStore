@@ -8,6 +8,8 @@ import "./Products.css";
 
 import Loader from "../Loader/Loader";
 
+import { Link } from "react-router-dom";
+
 function Products() {
   const { products, loading, getAllProducts } = useProductStore();
 
@@ -35,6 +37,7 @@ function Products() {
     })),
   ];
 
+  console.log(products);
   return (
     <>
       <section className="shop-banner">
@@ -74,6 +77,13 @@ function Products() {
                     )}
 
                     <img src={product.image} alt={product.title} />
+                    <Link
+                      to={`/products/${product.id}`}
+                      className="quick-view-btn text-decoration-none"
+                    >
+                      <i className="fa-regular fa-eye me-2"></i>
+                      Quick View
+                    </Link>
                   </div>
 
                   <h5>{product.title}</h5>

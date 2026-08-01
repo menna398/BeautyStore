@@ -27,6 +27,7 @@ const useProductStore = create((set) => ({
   },
 
   getAllProducts: async () => {
+    console.log("getAllProducts Call");
     set({ loading: true });
 
     try {
@@ -36,13 +37,37 @@ const useProductStore = create((set) => ({
         useProductStore.getState().getFragrances(),
       ]);
 
+    //   console.log(beauty);
+    //   console.log(skinCare);
+    //   console.log(fragrances);
+
+      const skinCareProducts = skinCare.map((item) => ({
+        ...item,
+        id: `skin-${item.id}`,
+      }));
+
+      const beautyProducts = beauty.map((item) => ({
+        ...item,
+        id: `beauty-${item.id}`,
+      }));
+
+      const fragranceProducts = fragrances.map((item) => ({
+        ...item,
+        id: `fragrance-${item.id}`,
+      }));
+
+    //   console.log("Beauty products:", beautyProducts);
+    //   console.log("Fragrances products:", fragranceProducts);
+    //   console.log("Skin Care products:", skinCareProducts);
+
       set({
-        products: [...beauty,...skinCare, ...fragrances],
+        products: [
+          ...beautyProducts,
+          ...skinCareProducts,
+          ...fragranceProducts,
+        ],
         loading: false,
       });
-    //   console.log("Beauty products:", beauty);
-    //   console.log("Fragrances products:", fragrances);
-    //   console.log("Skin Care products:", skinCare);
     } catch (error) {
       set({
         error: error.message,
