@@ -53,6 +53,31 @@ function ProductDetails() {
       </div>
     );
 
+  function addToCart(product) {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existingProduct = cart.find((item) => item.id === product.id);
+
+    if (existingProduct) {
+      if (existingProduct.quantity < 5) {
+        existingProduct.quantity++;
+        toast.success("Quantity updated");
+      } else {
+        toast.error("Cannot add more than 5 items");
+        return;
+      }
+    } else {
+      cart.push({
+        ...product,
+        quantity: 1,
+      });
+
+      toast.success("Item added to cart");
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+
   return (
     <div className="product-details py-5">
       <div className="container">
@@ -103,7 +128,10 @@ function ProductDetails() {
               </button>
             </div>
 
-            <button className="add-cart-btn">Add To Cart</button>
+            <button className="add-cart-btn" onClick={() => addToCart(product)}>
+              Add To Cart
+            </button>
+            
           </div>
         </div>
       </div>

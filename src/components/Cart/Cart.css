@@ -1,0 +1,41 @@
+.quantity-box-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.quantity-box-cart button {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.quantity-box-cart button:hover {
+  background: #d65d4a;
+  color: white;
+  border-color: #d65d4a;
+}
+
+.quantity-box-cart span {
+  font-weight: bold;
+  min-width: 20px;
+}
+
+.delete-btn {
+  border: none;
+  background: transparent;
+  color: #d65d4a;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  color: #b33d2d;
+}
+

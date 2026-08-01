@@ -1,6 +1,7 @@
 import React from "react";
 import HomePhoto from "../../../assets/HomePhoto2.jpg";
 import "./Hero.css";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -15,7 +16,9 @@ function Hero() {
           our passion.
         </h1>
 
-        <button>SHOP NOW</button>
+        <Link to="/products" className="text-decoration-none">
+          <button>SHOP NOW</button>
+        </Link>
       </div>
     </div>
   );

@@ -2,8 +2,34 @@ import React from "react";
 import products from "../../../data/homeProducts.json";
 import "./BestSellers.css";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 
 function BestSeller() {
+  function addToCart(product) {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existingProduct = cart.find((item) => item.id === product.id);
+
+    if (existingProduct) {
+      if (existingProduct.quantity < 5) {
+        existingProduct.quantity++;
+        toast.success("Quantity updated");
+      } else {
+        toast.error("Cannot add more than 5 items");
+        return;
+      }
+    } else {
+      cart.push({
+        ...product,
+        quantity: 1,
+      });
+
+      toast.success("Item added to cart");
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+
   return (
     <section className="container my-5 py-5">
       <div className="text-center mb-5">
@@ -53,7 +79,15 @@ function BestSeller() {
                   </span>
                 </p>
 
-                <button className="btn btn-dark w-100">Add To Cart</button>
+                <button
+                  className="btn btn-dark w-100"
+                  onClick={() => {
+                    // console.log("clicked");
+                    addToCart(product);
+                  }}
+                >
+                  Add To Cart
+                </button>
               </div>
             </div>
           </div>

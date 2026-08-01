@@ -9,6 +9,7 @@ import "./Products.css";
 import Loader from "../Loader/Loader";
 
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 
 function Products() {
   const { products, loading, getAllProducts } = useProductStore();
@@ -38,6 +39,32 @@ function Products() {
   ];
 
   console.log(products);
+
+  function addToCart(product) {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existingProduct = cart.find((item) => item.id === product.id);
+
+    if (existingProduct) {
+      if (existingProduct.quantity < 5) {
+        existingProduct.quantity++;
+        toast.success("Quantity updated");
+      } else {
+        toast.error("Cannot add more than 5 items");
+        return;
+      }
+    } else {
+      cart.push({
+        ...product,
+        quantity: 1,
+      });
+
+      toast.success("Item added to cart");
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+
   return (
     <>
       <section className="shop-banner">
@@ -96,7 +123,14 @@ function Products() {
                     )}
                   </p>
 
-                  <button className="btn btn-dark w-100">Add To Cart</button>
+                  <button
+                    className="btn btn-dark w-100"
+                    onClick={() => {
+                      addToCart(product);
+                    }}
+                  >
+                    Add To Cart
+                  </button>
                 </div>
               </div>
             ))
