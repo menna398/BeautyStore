@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import useProductStore from "../../store/productStore";
+import useProductStore from "../../Store/productStore";
 
 import bestSellers from "../../data/homeProducts.json";
 import extraSkinCare from "../../data/ExtraSkinCareProducts.json";

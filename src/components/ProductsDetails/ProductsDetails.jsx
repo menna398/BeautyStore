@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import useProductStore from "../../store/productStore";
+import useProductStore from "../../Store/productStore";
 
 import bestSellers from "../../data/homeProducts.json";
 import extraSkinCare from "../../data/ExtraSkinCareProducts.json";
@@ -131,7 +131,7 @@ function ProductDetails() {
             <button className="add-cart-btn" onClick={() => addToCart(product)}>
               Add To Cart
             </button>
-            
+
           </div>
         </div>
       </div>
