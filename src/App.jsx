@@ -3,7 +3,6 @@ import "./App.css";
 import Layout from "./components/Layout/Layout";
 import Home from "./components/Home/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import useProductStore from "../src/store/productStore";
 import Products from "./components/Products/Products";
 import ProductDetails from "./components/ProductsDetails/ProductsDetails";
 import { Toaster } from "react-hot-toast";
