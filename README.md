@@ -90,7 +90,10 @@ Desktop:
 
 
 Mobile:
-<img width="162" height="1280" alt="image" src="https://github.com/user-attachments/assets/533235b4-7f7b-47dd-bdd4-9f941765b925" />
+<img width="313" height="1280" alt="image" src="https://github.com/user-attachments/assets/95274d80-6ec1-4a46-a5ad-9dbc5700a49f" /> <img width="321" height="1280" alt="image" src="https://github.com/user-attachments/assets/9975c84c-8c2e-4dea-b6aa-ec70a617f289" /> <img width="316" height="1280" alt="image" src="https://github.com/user-attachments/assets/c7676861-9a5e-4f4a-8c98-67aa42c12bbd" />
+
+
+
 
 ---
 
