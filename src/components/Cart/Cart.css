@@ -38,3 +38,24 @@
 .delete-btn:hover {
   color: #b33d2d;
 }
+
+.checkout-btn {
+  background-color: #d65d4a;
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.checkout-btn:hover {
+  background-color: #b94a39;
+}
+
+.checkout-btn:disabled {
+  background-color: #cfcfcf;
+  cursor: not-allowed;
+  opacity: 0.7;
+}

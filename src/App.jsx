@@ -8,6 +8,7 @@ import ProductDetails from "./components/ProductsDetails/ProductsDetails";
 import { Toaster } from "react-hot-toast";
 import Cart from "./components/Cart/Cart";
 import Login from "./components/Login/Login";
+import Checkout from "./components/Checkout/Checkout";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login></Login>
       },
+      {
+        path: "/checkout",
+        element: <Checkout></Checkout>
+      }
     ],
   },
 ]);

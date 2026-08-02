@@ -18,6 +18,19 @@ function Cart() {
     0,
   );
 
+  const isLoggedIn = localStorage.getItem("userLogin") === "true";
+
+  function handleCheckout() {
+    if (!isLoggedIn) {
+      toast.error("Please login first");
+      return;
+    }
+
+    toast.success("Proceeding to checkout...");
+    // بعدين لما تعملي صفحة Checkout
+    // navigate("/checkout");
+  }
+
   return (
     <>
       <section className="shop-banner">
@@ -112,7 +125,26 @@ function Cart() {
               </tbody>
             </table>
 
-            <h3 className="text-end">Total: ${totalPrice.toFixed(2)}</h3>
+            <div className="text-end mt-4">
+              <h3>Total: ${totalPrice.toFixed(2)}</h3>
+
+              <button
+                className="checkout-btn mt-3"
+                onClick={handleCheckout}
+                disabled={!isLoggedIn}
+              >
+                <Link
+                  to="/checkout"
+                  className="text-white text-decoration-none"
+                >
+                  Checkout
+                </Link>
+              </button>
+
+              {!isLoggedIn && (
+                <p className="text-danger mt-2">Please login to continue.</p>
+              )}
+            </div>
           </>
         )}
       </div>
