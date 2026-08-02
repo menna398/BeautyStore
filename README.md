@@ -84,16 +84,11 @@ The application includes product browsing, shopping cart management and a respon
 ---
 
 ### 📱 Responsive Design
-
-Desktop:
-<img width="1917" height="977" alt="image" src="https://github.com/user-attachments/assets/cf6307b3-50b2-49ba-ac6d-64610c526c33" />
-
-
 Mobile:
-<img width="313" height="1280" alt="image" src="https://github.com/user-attachments/assets/95274d80-6ec1-4a46-a5ad-9dbc5700a49f" /> <img width="321" height="1280" alt="image" src="https://github.com/user-attachments/assets/9975c84c-8c2e-4dea-b6aa-ec70a617f289" /> <img width="316" height="1280" alt="image" src="https://github.com/user-attachments/assets/c7676861-9a5e-4f4a-8c98-67aa42c12bbd" />
 
-
-
+<img width="591" height="1280" alt="image" src="https://github.com/user-attachments/assets/94c7e51e-9562-463b-9f0f-c6c47f75a7ee" />
+<img width="591" height="1280" alt="image" src="https://github.com/user-attachments/assets/9b5f5dd4-f458-4c3e-b5c9-1790379afb53" />
+<img width="591" height="1280" alt="image" src="https://github.com/user-attachments/assets/43dd3d9c-ce3f-43c8-94e7-ba275032abcf" />
 
 ---
 
